@@ -1,4 +1,13 @@
-# Puppet heroku for Boxen
+# Heroku Puppet Module for Boxen
 
-FIXME: update me bro
+Requires the following boxen modules:
 
+* `boxen`
+
+## Usage
+
+```puppet
+heroku::plugin { 'accounts':
+  source => 'ddollar/heroku-accounts'
+}
+```
