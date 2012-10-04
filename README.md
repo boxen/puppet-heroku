@@ -11,3 +11,9 @@ heroku::plugin { 'accounts':
   source => 'ddollar/heroku-accounts'
 }
 ```
+
+## Developing
+
+Write code.
+
+Run `script/cibuild`.
