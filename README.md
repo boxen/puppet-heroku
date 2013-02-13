@@ -1,8 +1,6 @@
 # Heroku Puppet Module for Boxen
 
-Requires the following boxen modules:
-
-* `boxen`
+Install [Heroku](http://heroku.com) plugins.
 
 ## Usage
 
@@ -12,8 +10,11 @@ heroku::plugin { 'accounts':
 }
 ```
 
-## Developing
+## Required Puppet Modules
 
-Write code.
+* `boxen`
 
-Run `script/cibuild`.
+## Development
+
+Write code. Run `script/cibuild` to test it. Check the `script`
+directory for other useful tools.
