@@ -8,7 +8,7 @@ class heroku {
   include boxen::config
 
   $root = "${boxen::config::home}/heroku"
-  
+
   $curl = 'curl -s http://assets.heroku.com.s3.amazonaws.com/heroku-client/heroku-client.tgz'
   $tar  = 'tar zxv - --strip-components 1'
 
@@ -18,10 +18,10 @@ class heroku {
     "${boxen::config::envdir}/heroku.sh":
       source => 'puppet:///modules/heroku/heroku.sh' ;
   }
-  
+
   exec { 'install heroku standalone toolbelt':
     command => "${curl} | ${tar}",
     cwd     => $root,
     creates => "${root}/bin/heroku"
-  }  
+  }
 }
