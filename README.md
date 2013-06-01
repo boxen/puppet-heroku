@@ -1,8 +1,14 @@
 # Heroku Puppet Module for Boxen
 
-Install [Heroku](http://heroku.com) plugins.
+Install [Heroku](http://heroku.com) CLI and/or plugins.
 
-## Usage
+## Install CLI
+
+```puppet
+include heroku
+```
+
+## Install Plugins with CLI
 
 ```puppet
 heroku::plugin { 'accounts':
