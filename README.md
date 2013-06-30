@@ -1,5 +1,7 @@
 # Heroku Puppet Module for Boxen
 
+[![Build Status](https://travis-ci.org/boxen/puppet-heroku.png?branch=master)](https://travis-ci.org/boxen/puppet-heroku)
+
 Install [Heroku](http://heroku.com) CLI and/or plugins.
 
 ## Install CLI
