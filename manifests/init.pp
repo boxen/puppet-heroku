@@ -12,8 +12,11 @@ class heroku {
   $curl = 'curl -s http://assets.heroku.com.s3.amazonaws.com/heroku-client/heroku-client.tgz'
   $tar  = 'tar zxv - --strip-components 1'
 
-  file { $root:
-    ensure => directory,
+  file {
+    $root:
+      ensure => directory ;
+    "${boxen::config::envdir}/heroku.sh":
+      ensure => absent ;
   }
 
   boxen::env_script { 'heroku':
