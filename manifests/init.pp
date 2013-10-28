@@ -12,11 +12,13 @@ class heroku {
   $curl = 'curl -s http://assets.heroku.com.s3.amazonaws.com/heroku-client/heroku-client.tgz'
   $tar  = 'tar zxv - --strip-components 1'
 
-  file {
-    $root:
-      ensure => directory ;
-    "${boxen::config::envdir}/heroku.sh":
-      source => 'puppet:///modules/heroku/heroku.sh' ;
+  file { $root:
+    ensure => directory,
+  }
+
+  boxen::env_script { 'heroku':
+    priority => 'lower',
+    source   => 'puppet:///modules/heroku/heroku.sh',
   }
 
   exec { 'install heroku standalone toolbelt':
