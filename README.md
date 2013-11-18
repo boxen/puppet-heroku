@@ -20,7 +20,7 @@ heroku::plugin { 'accounts':
 
 ## Required Puppet Modules
 
-* `boxen`
+* `boxen '3.3.4'`
 
 ## Development
 
