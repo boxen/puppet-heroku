@@ -9,7 +9,7 @@ class heroku {
 
   $root = "${boxen::config::home}/heroku"
 
-  $curl = 'curl -s http://assets.heroku.com.s3.amazonaws.com/heroku-client/heroku-client.tgz'
+  $curl = 'curl -s https://s3.amazonaws.com/assets.heroku.com/heroku-client/heroku-client.tgz'
   $tar  = 'tar zxv - --strip-components 1'
 
   file {
