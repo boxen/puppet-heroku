@@ -19,6 +19,11 @@ class heroku {
       ensure => absent ;
   }
 
+  boxen::env_script { 'heroku-fish':
+    priority => 'lower',
+    source   => 'puppet:///modules/heroku/heroku.fish',
+  }
+
   boxen::env_script { 'heroku':
     priority => 'lower',
     source   => 'puppet:///modules/heroku/heroku.sh',
