@@ -20,9 +20,10 @@ class heroku {
   }
 
   boxen::env_script { 'heroku-fish':
-    priority  => 'lower',
-    source    => 'puppet:///modules/heroku/heroku.fish',
-    extension => 'fish',
+    priority   => 'lower',
+    source     => 'puppet:///modules/heroku/heroku.fish',
+    scriptname => 'heroku',
+    extension  => 'fish',
   }
 
   boxen::env_script { 'heroku':
